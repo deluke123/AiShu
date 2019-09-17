@@ -7,6 +7,7 @@ class HupuspiderSpider(scrapy.Spider):
     allowed_domains = ['hupu.com']
     start_urls = ['https://bbs.hupu.com/all-gambia', 'https://soccer.hupu.com/china/']
     base_url = 'https://bbs.hupu.com'
+
     def parse(self, response):
         url = response.url
         if url == 'https://bbs.hupu.com/all-gambia':
